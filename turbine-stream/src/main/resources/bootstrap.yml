@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: turbine-stream
+  rabbitmq:
+    host: 10.0.1.16
+    port: 5672
+server:
+  port: 8989
+
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
+
+turbine:
+  stream:
+    destination: hystrixStreamOutput
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: monitoring
+server:
+  servlet:
+    context-path: /monitoring
+  port: 9000
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
+
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
